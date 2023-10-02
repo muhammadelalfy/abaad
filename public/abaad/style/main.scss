@@ -1,0 +1,370 @@
+$theme-colors: (
+    "primary": #1771E6,
+    "secondary": #F4F4F4,
+    "success": #00bd78,
+    "info": #2B3990,
+    "warning": #bda700,
+    "danger": #FF2020,
+    "light": #F5F5F5,
+    "dark": #002f4b
+);
+
+$grays: (
+    "100": #f8f9fa,
+    "200": #e9ecef,
+    "300": #dee2e6,
+    "400": #ced4da,
+    "500": #adb5bd,
+    "600": #666666,
+    "700": #495057,
+    "800": #343a40,
+    "900": #212529) !default;
+//Body
+// $body-bg: #f5f5f5; 
+//inputs
+$input-bg: #F7F7FD;
+$input-border-color: #E0DEF7;
+
+//card
+$card-bg: #fff;
+
+$card-border-color: #eeeeee;
+
+@import "../package/bootstrap-5.3.1/scss/bootstrap.scss";
+
+
+@font-face {
+    font-family: "DIN Next LT Arabic Light";
+    src: url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.eot"
+    );
+src: url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.svg#DIN Next LT Arabic Light")format("svg");
+}
+
+* {
+    font-family: "DIN Next LT Arabic Light";
+}
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+p {
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+}
+
+// UI Elements style
+.inputWithIcon {
+    position: relative;
+
+    .input-icon {
+        position: absolute;
+        height: 100%;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #6F767E
+    }
+
+    .icon-input {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
+}
+
+// login and Create accout style
+.page-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100vh;
+
+
+
+    .landing-img {
+        min-width: 50%;
+        background-image: url(../assets/img/login.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media screen and  (max-width: 768px) {
+            position: fixed;
+            width: 100%;
+            z-index: -1;
+            height: 100vh;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-self: stretch;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(var(--bs-info-rgb), 0.50);
+            align-items: center;
+            justify-content: center;
+        }
+
+
+    }
+
+    .form-area {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        flex: 1 1 auto;
+        padding: 0;
+        flex-basis: 100%;
+        flex-direction: column;
+        width: 0;
+        min-width: 0;
+        max-width: 50%;
+        .responsive-card{
+            max-width: 90% ;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 768px) {
+            // position: absolute;
+            max-width: 100% !important;
+            width: 100%;
+            .responsive-card{
+                background: rgba(var(--bs-white-rgb), 0.80);
+                border-radius: 1rem;
+                padding: 1rem;
+                max-width: 95%;
+               margin: 15px auto;
+            }
+        }
+
+      
+
+        .floated-logo {
+            position: absolute;
+            right: 0;
+            top: 0;
+            max-height: 200px;
+
+        }
+
+        .form-wrapper {
+            min-height: calc(100vh);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          
+        }
+
+    }
+}
+
+ion-icon#show-password {
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+}
+
+.navbar-nav {
+    .user-info {
+        align-items: center;
+
+        .user-icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ion-icon {
+                font-size: large;
+            }
+        }
+    }
+
+}
+
+.title-lable {
+    color: var(--bs-gray-600);
+}
+
+.section-header {
+    margin-bottom: 1rem;
+
+    .title {
+        font-weight: 800;
+    }
+
+    .subtitle {
+        color: var(--bs-gray-600);
+    }
+}
+
+#main-carousel {
+    .carousel-item {
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: rgba(var(--bs-black-rgb), 0.40);
+        }
+
+        .carousel-caption {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .carousel-header {}
+
+        }
+    }
+}
+
+.item-figure {
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    .figure {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        .figure-img {
+            width: 100%;
+
+        }
+
+        .figure-caption {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(var(--bs-black-rgb), 0.40);
+            color: var(--bs-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .caption-title {
+                font-weight: 700;
+
+            }
+        }
+    }
+
+}
+
+.text-gray-6 {
+    color: var(--bs-gray-600);
+}
+
+.owl-carousel {
+    .owl-nav {
+        position: absolute;
+        top: -75px;
+        left: 1rem;
+        font-size: 2rem;
+
+        .owl-prev,
+        .owl-next {
+            height: 35px;
+            width: 35px;
+            border: 1px solid rgba(var(--bs-black-rgb), 0.40) !important;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+
+            span {
+                line-height: 35px;
+                vertical-align: middle;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.test-card {
+    .star-rate {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-right: 3px;
+
+            img {
+                height: 15px;
+            }
+        }
+    }
+
+    .test-icon {
+        max-height: 35px;
+        width: auto !important;
+    }
+
+    .user-info {
+        .sub-info {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+footer {
+    .contact-info {
+        align-items: center;
+
+        .contact-icon {
+            min-width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        .sub-info {
+            font-size: 0.75rem;
+        }
+
+    }
+
+    .footer-list {
+        list-style: none;
+        padding: 5px;
+
+        li {
+            color: var(--bs-gray-600);
+            line-height: 2;
+
+            &::before {
+                content: "\00BB";
+                // font-size: 0.75rem;
+                // font-weight: 600;
+                line-height: 1.25;
+                color: var(--bs-gray-600);
+            }
+        }
+
+    }
+}
